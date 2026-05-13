@@ -1,0 +1,34 @@
+name: Onboard Service to Postman
+
+on:
+  workflow_dispatch:
+    inputs:
+      project_name:
+        description: Service project name
+        required: true
+        default: payment-refund-api
+      domain:
+        description: Business domain label
+        required: false
+        default: payments
+
+jobs:
+  onboard:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Onboard to Postman
+        uses: mmorales84/cse-exercise/starter-assets/actions/onboard-service@main
+        with:
+          project-name: ${{ inputs.project_name }}
+          domain: ${{ inputs.domain }}
+          spec-url: https://raw.githubusercontent.com/${{ github.repository }}/main/specs/payment-refund-api-openapi.yaml
+          spec-path: specs/payment-refund-api-openapi.yaml
+          environments-json: '["prod","uat","qa","dev"]'
+          postman-api-key: ${{ secrets.POSTMAN_API_KEY }}
+          postman-access-token: ${{ secrets.POSTMAN_ACCESS_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
