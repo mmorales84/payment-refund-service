@@ -1,0 +1,24 @@
+workspace:
+  id: 9a13ecf9-9e85-4848-b31f-2b11328b29b9
+localResources:
+  collections:
+    - ../postman/collections/[Baseline] payment-refund-api
+    - ../postman/collections/[Smoke] payment-refund-api
+    - ../postman/collections/[Contract] payment-refund-api
+  environments:
+    - ../postman/environments/prod.postman_environment.json
+    - ../postman/environments/uat.postman_environment.json
+    - ../postman/environments/qa.postman_environment.json
+    - ../postman/environments/dev.postman_environment.json
+  specs:
+    - ../specs/payment-refund-api-openapi.yaml
+cloudResources:
+  collections:
+    ../postman/collections/[Baseline] payment-refund-api: 5019470-4fb4cd7b-bd7e-405d-8a5b-2acfaa9dfb75
+    ../postman/collections/[Smoke] payment-refund-api: 5019470-3a57be52-98c2-499e-a2cd-a03e41ffdd61
+    ../postman/collections/[Contract] payment-refund-api: 5019470-5afce17d-d174-480a-ae53-26cc7db33ed8
+  environments:
+    ../postman/environments/prod.postman_environment.json: 5019470-82f34d6e-f858-49a2-86bc-2f6be9c0ab81
+    ../postman/environments/uat.postman_environment.json: 5019470-a80b72e5-bc7b-46a1-b4ea-e10d90815f2b
+    ../postman/environments/qa.postman_environment.json: 5019470-7e6bfab2-fe1c-41d4-b0d8-f2ec784db475
+    ../postman/environments/dev.postman_environment.json: 5019470-2401361a-8fa9-4193-b9a7-915fdaf24e59
