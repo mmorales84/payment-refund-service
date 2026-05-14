@@ -31,4 +31,4 @@ jobs:
           environments-json: '["prod","uat","qa","dev"]'
           postman-api-key: ${{ secrets.POSTMAN_API_KEY }}
           postman-access-token: ${{ secrets.POSTMAN_ACCESS_TOKEN }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.CSE_WORKFLOW_TOKEN }}
